@@ -2,12 +2,6 @@
 
 Integrantes: Zarith Isabella Restrepo, Isabela Botero y Marcela Londoño · Video: https://www.youtube.com/watch?v=2yGMaICuUWQ
 
-```
-trabajo1/
-├── parteA/01_bronce.sql  02_hallazgos.sql  03_plata.sql  04_oro.sql  05_comparacion.sql
-└── parteB/lambda_function.py  publicar_eventos.py  conteos_y_retraso.py
-```
-
 ---
 
 ## PARTE A – Medallion en Athena
