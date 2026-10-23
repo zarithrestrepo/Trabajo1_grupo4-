@@ -1,11 +1,6 @@
 # Trabajo 1 – Capas Medallion y streaming (APGD 2026-2)
 
-Integrantes: _completar_ · Video: _link YouTube (no listado)_ · Región: **us-east-2**
-
-> ⚠️ **Condición eliminatoria:** todos los recursos se crean **a mano en la consola**.
-> No usar `serverless deploy`, CloudFormation ni Terraform. Antes de grabar, ir a
-> **CloudFormation → Stacks (us-east-2)** y borrar cualquier stack que haya quedado de los
-> laboratorios (Serverless crea uno por cada deploy). En el video se muestra la lista vacía.
+Integrantes: Zarith Isabella Restrepo, Isabela Botero y Marcela Londoño · Video: https://www.youtube.com/watch?v=2yGMaICuUWQ
 
 ```
 trabajo1/
@@ -189,26 +184,3 @@ registros, varios consumidores y costo por shard en vez de por mensaje. Para dej
 analíticos en el lago, usaríamos **Data Firehose → S3 (Parquet/Iceberg)** en lugar de DynamoDB. En
 SQS Standard, además, el costo por mensaje y la cantidad de invocaciones de Lambda crecen en
 línea con el volumen, y la cola no garantiza orden.
-
----
-
-## Guion del video (≤ 10 min, todos hablan con cámara)
-
-| Min | Quién | Contenido |
-|---|---|---|
-| 0:00-0:30 | Todos | Presentación con cámara |
-| 0:30-1:15 | Int. 1 | Descripción del dataset; archivo en S3; tabla bronce (`SELECT ... LIMIT 10`, conteo) |
-| 1:15-2:15 | Int. 1 | Tabla de hallazgos y detalle de los ceros |
-| 2:15-3:30 | Int. 2 | Reglas R1-R7, tablas plata, conteo que cuadra y rechazos por motivo |
-| 3:30-4:15 | Int. 2 | Oro: pregunta de negocio y resultado |
-| 4:15-5:00 | Int. 2 | Comparación de bytes y tiempo + interpretación |
-| 5:00-5:40 | Int. 1 | Pregunta final A |
-| 5:40-6:40 | Int. 3 | Consola: regla IoT, cola SQS, Lambda (código + trigger), tablas DynamoDB + llave |
-| 6:40-7:50 | Int. 3 | Publicación de 10.000 eventos, ítems en DynamoDB, `conteos_y_retraso.py` |
-| 7:50-8:40 | Int. 3 | Pregunta final B |
-| 8:40-9:10 | Cualquiera | **CloudFormation sin stacks en us-east-2** |
-
-Antes de grabar: zoom del navegador al 125-150 %, sin pestañas con credenciales y sin mostrar `~/.aws` ni variables de entorno.
-
-## Limpieza (después de grabar)
-IoT rule → Lambda (y su trigger) → cola SQS → tablas DynamoDB → tablas/BD en Athena (`DROP TABLE`) → bucket S3 (vaciar y borrar) → roles IAM creados.
