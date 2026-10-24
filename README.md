@@ -1,4 +1,4 @@
-# Trabajo 1 – Capas Medallion y streaming (APGD 2026-2)
+# Trabajo 1 – (APGD 2026-2)
 
 Integrantes: Zarith Isabella Restrepo, Isabela Botero y Marcela Londoño · Video: https://www.youtube.com/watch?v=2yGMaICuUWQ
 
